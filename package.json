@@ -1,7 +1,7 @@
 {
   "name": "classic",
   "description": "Straightforward classes for node.js or web browsers",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/tarruda/classic",
   "author": {
     "name": "Thiago de Arruda",
