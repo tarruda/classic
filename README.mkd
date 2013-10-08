@@ -1,0 +1,62 @@
+# classic
+
+> Straightforward classes for node.js or web browsers
+
+## Installation
+
+```sh
+npm install --save classic
+```
+
+## Usage
+
+```js
+var classic = require('classic');
+
+
+// Using function invoked with the prototype as 'this'
+var Person = classic(function() {
+  this.constructor = function(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  };
+
+  this.name = function() {
+    return this.firstname + ' ' + this.lastname;
+  };
+});
+var p = new Person('john', 'doe');
+p.name(); // 'john doe'
+p instanceof Person; // true
+
+
+// Passing the prototype directly and a superclass as second argument
+var Actor = classic({
+  constructor: function(firstname, lastname, movieCount) {
+    Person.apply(this, arguments);
+    this.movieCount = movieCount;
+  },
+
+  name: function() {
+    return Person.prototype.name.call(this) + ', acted in ' +
+      this.movieCount + ' movies';
+  }
+}, Person);
+var a = new Actor('john', 'travolta', 42);
+a.name(); // 'john travolta, acted in 42 movies'
+p instanceof Person && p instanceof Actor; // true
+
+
+// Every class created has an 'extend' method that may be used instead of
+// passing the superclass as second argument. Constructors may also be
+// omitted(the superclass constructor is invoked with the passed  arguments)
+var Director = Actor.extend(function() {
+  this.name = function() {
+    return Person.prototype.name.call(this) + ', directed ' +
+      this.movieCount + ' movies';
+  };
+});
+var d = new Director('quentin', 'tarantino', 42);
+d.name(); // 'quentin tarantino, directed 42 movies'
+p instanceof Person && p instanceof Actor && p instanceof Director; // true
+```
