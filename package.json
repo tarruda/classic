@@ -38,8 +38,8 @@
     "grunt-release": "~0.5.1",
     "grunt-newer": "~0.5.4",
     "mocha": "~1.13.0",
-    "grunt-cli": "~0.1.9",
-    "powerbuild": "0.0.5"
+    "powerbuild": "0.0.5",
+    "grunt-saucelabs": "~4.1.2"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -50,18 +50,5 @@
   },
   "scripts": {
     "test": "grunt travis"
-  },
-  "testling": {
-    "browsers": [
-      "ie6", "ie7", "ie8", "ie9",
-      "firefox/15", "chrome/22", "opera/12", "safari/5.1"
-    ],
-    "harness" : "mocha",
-    "scripts": [
-      "node_modules/grunt-mocha-debug/node_modules/run-mocha/index.js"
-    ],
-    "files": [
-      "test/*.js"
-    ]
   }
 }
