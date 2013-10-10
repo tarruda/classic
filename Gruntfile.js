@@ -1,35 +1,29 @@
 // browsers to test in saucelabs
 var browsers = [{
-  browserName: "firefox",
-  version: "19",
-  platform: "XP"
-}, {
-  browserName: "chrome",
-  platform: "XP"
-}, {
-  browserName: "internet explorer",
-  platform: "XP",
-  version: "6"
-}, {
   browserName: "internet explorer",
   platform: "XP",
   version: "7"
 }, {
   browserName: "internet explorer",
-  platform: "XP",
+  platform: "WIN7",
   version: "8"
 }, {
   browserName: "internet explorer",
-  platform: "VISTA",
+  platform: "WIN7",
   version: "9"
 }, {
   browserName: "internet explorer",
-  platform: "VISTA",
+  platform: "WIN7",
   version: "10"
 }, {
+  browserName: "firefox",
+  platform: "WIN7"
+}, {
+  browserName: "chrome",
+  platform: "WIN7"
+}, {
   browserName: "opera",
-  platform: "XP",
-  version: "12"
+  platform: "WIN7"
 }];
 
 
@@ -64,7 +58,7 @@ module.exports = function(grunt) {
       },
       browser: {
         options: {
-          listenAddress: '127.0.0.1',
+          listenAddress: '0.0.0.0',
           listenPort: 9999,
           phantomjs: true,
           src: ['build/test-bundle.js']
