@@ -1,5 +1,5 @@
 mocha.setup({
-  reporter: mocha.TAP,
+  reporter: 'tap',
   ui: 'bdd',
   ignoreLeaks: true
 });
