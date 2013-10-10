@@ -49,10 +49,9 @@
     "browsers": [
       "chrome/22"
     ],
+    "harness": "mocha",
     "scripts": [
-      "node_modules/grunt-mocha-debug/node_modules/mocha/mocha.js",
       "node_modules/grunt-mocha-debug/node_modules/run-mocha/index.js",
-      "mocha-testling-setup.js"
     ],
     "files": [
       "test/*.js"
