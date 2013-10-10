@@ -1,4 +1,6 @@
-for (var k in require('assert')) global[k] = assert[k];
+var assert = require('assert');
+
+for (var k in assert) global[k] = assert[k];
 
 
 var classic = require('../src');
@@ -44,23 +46,23 @@ runMocha({
   'Suite': {
     'passing function': function() {
       var p = new Person('john', 'doe');
-      expect(p.name()).to.eql('john doe');
-      expect(p).to.be.instanceOf(Person);
+      equal(p.name(), 'john doe');
+      ok(p instanceof Person);
     },
 
     'passing prototype': function() {
       var a = new Actor('john', 'travolta', 42);
-      expect(a.name()).to.eql('john travolta, acted in 42 movies');
-      expect(a).to.be.instanceOf(Person);
-      expect(a).to.be.instanceOf(Actor);
+      equal(a.name(), 'john travolta, acted in 42 movies');
+      ok(a instanceof Person);
+      ok(a instanceof Actor);
     },
 
     'passing function inheriting constructor': function() {
       var d = new Director('quentin', 'tarantino', 42);
-      expect(d.name()).to.eql('quentin tarantino, directed 42 movies');
-      expect(d).to.be.instanceOf(Person);
-      expect(d).to.be.instanceOf(Actor);
-      expect(d).to.be.instanceOf(Director);
+      equal(d.name(), 'quentin tarantino, directed 42 movies');
+      ok(d instanceof Person);
+      ok(d instanceof Actor);
+      ok(d instanceof Director);
     }
   }
 });

@@ -36,7 +36,8 @@
     "grunt-mocha-debug": "~0.0.8",
     "grunt-exec-jshint": "~0.0.0",
     "grunt-release": "~0.5.1",
-    "grunt-newer": "~0.5.4"
+    "grunt-newer": "~0.5.4",
+    "mocha": "~1.13.0"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -51,7 +52,7 @@
     ],
     "harness": "mocha",
     "scripts": [
-      "node_modules/grunt-mocha-debug/node_modules/run-mocha/index.js",
+      "node_modules/grunt-mocha-debug/node_modules/run-mocha/index.js"
     ],
     "files": [
       "test/*.js"
