@@ -47,20 +47,7 @@
     "has": "0.0.1",
     "powerbuild": "0.0.4"
   },
-  "testling": {
-    "browsers": [
-      "ie6",
-      "firefox/15",
-      "chrome/22",
-      "opera/12",
-      "safari/5.1"
-    ],
-    "scripts": [
-      "run-mocha.js"
-    ],
-    "harness": "mocha",
-    "files": [
-      "test/*.js"
-    ]
+  "scripts": {
+    "test": "grunt travis"
   }
 }
