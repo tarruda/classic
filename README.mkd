@@ -2,10 +2,10 @@
 
 > Straightforward classes for node.js or web browsers
 
-Node.js:
+#### Node.js:
 [![Build Status](https://travis-ci.org/tarruda/classic.png)](https://travis-ci.org/tarruda/classic)
 
-Browsers:
+#### Web browsers:
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/tarruda_classic.svg)](https://saucelabs.com/u/tarruda_classic)
 
 ## Installation
