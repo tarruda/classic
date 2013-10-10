@@ -5,7 +5,6 @@ var browsers = [{
   platform: "XP"
 }, {
   browserName: "chrome",
-  version: "20",
   platform: "XP"
 }, {
   browserName: "internet explorer",
@@ -31,15 +30,7 @@ var browsers = [{
   browserName: "opera",
   platform: "XP",
   version: "12"
-}/*, {
-  browser: "android",
-  os: "Linux",
-  version: "4.0"
-}, {
-  browser: "iphone",
-  os: "OS X 10.6",
-  version: "4"
-}*/];
+}];
 
 
 module.exports = function(grunt) {
