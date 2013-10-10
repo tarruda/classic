@@ -38,15 +38,15 @@
     "grunt-release": "~0.5.1",
     "grunt-newer": "~0.5.4",
     "mocha": "~1.13.0",
-    "grunt-cli": "~0.1.9"
+    "grunt-cli": "~0.1.9",
+    "powerbuild": "0.0.5"
   },
   "engines": {
     "node": ">= 0.8.0"
   },
   "dependencies": {
     "inherits": "~2.0.1",
-    "has": "0.0.1",
-    "powerbuild": "0.0.4"
+    "has": "0.0.1"
   },
   "scripts": {
     "test": "grunt travis"

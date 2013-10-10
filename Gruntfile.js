@@ -9,8 +9,7 @@ module.exports = function(grunt) {
 
     powerbuild: {
       options: {
-        sourceMap: true,
-        compress: true
+        sourceMap: true
       },
       test: {
         files: [{
@@ -18,7 +17,7 @@ module.exports = function(grunt) {
             'node_modules/grunt-mocha-debug/node_modulesrun-mocha/index.js',
             'test/**/*.js'
           ],
-          dest: 'scripts/test-bundle.js'
+          dest: 'build/test-bundle.js'
         }]
       }
     },
@@ -36,7 +35,7 @@ module.exports = function(grunt) {
       browser: {
         options: {
           phantomjs: true,
-          src: ['scripts/test-bundle.js']
+          src: ['build/test-bundle.js']
         }
       }
     },
