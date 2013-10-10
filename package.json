@@ -59,7 +59,8 @@
     ],
     "harness": "mocha",
     "scripts": [
-      "node_modules/run-mocha/index.js"
+      "node_modules/run-mocha/index.js",
+      "mocha-testling-setup.js"
     ],
     "files": [
       "test/*.js"
