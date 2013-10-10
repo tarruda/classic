@@ -1,10 +1,6 @@
 // browsers to test in saucelabs
 var browsers = [{
   browserName: "internet explorer",
-  platform: "XP",
-  version: "7"
-}, {
-  browserName: "internet explorer",
   platform: "WIN7",
   version: "8"
 }, {
