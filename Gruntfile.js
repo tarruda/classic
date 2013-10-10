@@ -5,23 +5,41 @@ var browsers = [{
   platform: "XP"
 }, {
   browserName: "chrome",
+  version: "20",
   platform: "XP"
 }, {
-  browserName: "chrome",
-  platform: "linux"
+  browserName: "internet explorer",
+  platform: "XP",
+  version: "6"
 }, {
   browserName: "internet explorer",
-  platform: "WIN8",
-  version: "10"
+  platform: "XP",
+  version: "7"
+}, {
+  browserName: "internet explorer",
+  platform: "XP",
+  version: "8"
 }, {
   browserName: "internet explorer",
   platform: "VISTA",
   version: "9"
 }, {
+  browserName: "internet explorer",
+  platform: "VISTA",
+  version: "10"
+}, {
   browserName: "opera",
-  platform: "Windows 2008",
+  platform: "XP",
   version: "12"
-}];
+}/*, {
+  browser: "android",
+  os: "Linux",
+  version: "4.0"
+}, {
+  browser: "iphone",
+  os: "OS X 10.6",
+  version: "4"
+}*/];
 
 
 module.exports = function(grunt) {
