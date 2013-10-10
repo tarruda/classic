@@ -31,13 +31,13 @@
   ],
   "main": "./src/index",
   "devDependencies": {
-    "chai": "~1.7.2",
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-mocha-debug": "~0.0.6",
+    "grunt-mocha-debug": "~0.0.8",
     "grunt-exec-jshint": "~0.0.0",
     "grunt-release": "~0.5.1",
-    "grunt-newer": "~0.5.4"
+    "grunt-newer": "~0.5.4",
+    "run-mocha": "0.0.3"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -45,5 +45,24 @@
   "dependencies": {
     "inherits": "~2.0.1",
     "has": "0.0.1"
+  },
+  "testling": {
+    "browsers": [
+      "ie6",
+      "ie7",
+      "ie8",
+      "ie9",
+      "firefox/15",
+      "chrome/22",
+      "opera/12",
+      "safari/5.1"
+    ],
+    "harness": "mocha",
+    "scripts": [
+      "node_modules/run-mocha/index.js"
+    ],
+    "files": [
+      "test/*.js"
+    ]
   }
 }

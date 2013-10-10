@@ -1,4 +1,6 @@
-global.expect = require('chai').expect;
+for (var k in require('assert')) global[k] = assert[k];
+
+
 var classic = require('../src');
 
 
@@ -38,7 +40,7 @@ var Director = Actor.extend(function() {
 });
 
 
-run({
+runMocha({
   'Suite': {
     'passing function': function() {
       var p = new Person('john', 'doe');

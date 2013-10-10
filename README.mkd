@@ -2,6 +2,8 @@
 
 > Straightforward classes for node.js or web browsers
 
+[![browser support](http://ci.testling.com/tarruda/classic.png)](http://ci.testling.com/tarruda/classic)
+
 ## Installation
 
 ```sh
