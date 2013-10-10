@@ -60,6 +60,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['newer:exec_jshint', 'powerbuild', 'mocha_debug']);
 
   grunt.registerTask('publish', ['mocha_debug', 'release']);
-  grunt.registerTask('travis', ['exec_jshint', 'mocha_debug']);
+  grunt.registerTask('travis', ['test']);
   grunt.registerTask('default', ['test', 'watch']);
 };
